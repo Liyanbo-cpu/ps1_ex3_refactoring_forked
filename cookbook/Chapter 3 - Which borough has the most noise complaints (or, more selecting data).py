@@ -22,7 +22,7 @@ complaints = pd.read_csv("../data/311-service-requests.csv", dtype="unicode")
 # TODO: rewrite the above using the polars library (you might have to import it above) and call the data frame pl_complaints
 pl_complaints = pl.read_csv(
     "../data/311-service-requests.csv",
-    infer_schema=False
+    infer_schema=False,
     null_values=["", "NA", "NaN", "N/A"],
 )
 
