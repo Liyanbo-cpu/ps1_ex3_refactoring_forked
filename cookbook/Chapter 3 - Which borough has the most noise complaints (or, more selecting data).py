@@ -23,6 +23,7 @@ complaints = pd.read_csv("../data/311-service-requests.csv", dtype="unicode")
 pl_complaints = pl.read_csv(
     "../data/311-service-requests.csv",
     infer_schema=False
+    null_values=["", "NA", "NaN", "N/A"],
 )
 
 # %%
